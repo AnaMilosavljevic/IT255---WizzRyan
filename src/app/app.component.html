@@ -1,0 +1,21 @@
+
+<form class="ui large form segment">
+  <h3 class="ui header">Add new flight</h3>
+  <div class="field">
+    <label for="description">Description:</label>
+    <input name="description" id="description" #newdescription>
+  </div>
+  <div class="field">
+    <label for="roomno">Flight number:</label>
+    <input name="roomno" id="roomno"
+    minlength="6"
+    maxlength="6"
+    #newroomno>
+  </div>
+  <button (click)="addRoom(newdescription, newroomno)" class="ui beige right floated button">
+    Submit
+    </button>
+</form>
+<div class="tbody">
+  <app-room *ngFor="let room of rooms" [room]="room"></app-room>
+</div>
