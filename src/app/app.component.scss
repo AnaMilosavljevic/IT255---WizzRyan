@@ -1,5 +1,28 @@
 .field input {
-    background-color: transparent;
-    border-width: 2px;
-  }
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-width: 2px;
+}
 
+.ui.large.form.segment {
+  max-width: 650px;
+  position: relative;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  border-color: pink;
+  border-width: 2px;
+}
+
+.ui.header {
+  color: pink;
+  text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple;
+}
+
+form.ui.segment.form {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding-top: 1px;
+
+}

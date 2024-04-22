@@ -1,0 +1,24 @@
+.ui.menu{
+    max-width: 100%;
+}
+.ui.header{
+    max-width: 100%;
+}
+.ui.header.item.borderless{
+    max-width: 100%;
+}
+.ui.menu .ui.container {
+    display: flex;
+    justify-content: space-between; /* Poravnanje na desnu stranu */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.ui.header {
+    text-align: center; /* Poravnanje teksta na sredinu */
+    padding-left: 2em;
+    align-items: center;
+}

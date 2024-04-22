@@ -1,5 +1,6 @@
-
-<form class="ui large form segment">
+<app-home></app-home>
+<router-outlet></router-outlet>
+<br><form class="ui large form segment">
   <h3 class="ui header">Add new flight</h3>
   <div class="field">
     <label for="description">Description:</label>
@@ -12,7 +13,7 @@
     maxlength="6"
     #newroomno>
   </div>
-  <button (click)="addRoom(newdescription, newroomno)" class="ui beige right floated button">
+  <button (click)="addRoom(newdescription, newroomno)" class="ui pink right floated button">
     Submit
     </button>
 </form>

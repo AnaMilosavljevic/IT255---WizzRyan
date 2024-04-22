@@ -31,20 +31,9 @@ form.form:after {
   color: #9A9A9A;
 }
 
-.ui.grid>.row>.column.votes {
-  display: flex;
-  margin-left: 14px;
-  max-width: 150px;
-}
 
 ul.ui.list li:before {
   content: '';
-}
-
-.logo1{
-    max-width: 150px;
-    margin-left: -13px;
-    border-radius: 50%;
 }
 
 body{
@@ -56,8 +45,6 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: absolute;
-
-
 }
 
 
