@@ -1,22 +1,48 @@
 <app-home></app-home>
 <router-outlet></router-outlet>
-<br><form class="ui large form segment">
+<br>
+<form class="ui large form segment" *ngIf="pageService.getIsHomePage()" [formGroup]="flightForm" (ngSubmit)="onSubmit()">
   <h3 class="ui header">Add new flight</h3>
-  <div class="field">
+  <div class="field" [class.error]="flightForm.get('description')?.invalid && (flightForm.get('description')?.dirty || flightForm.get('description')?.touched)">
     <label for="description">Description:</label>
-    <input name="description" id="description" #newdescription>
+    <input formControlName="description" id="description">
+    <div *ngIf="flightForm.get('description')?.invalid && (flightForm.get('description')?.dirty || flightForm.get('description')?.touched)"
+         class="ui error message">Description is required.</div>
+    <div *ngIf="!flightForm.get('description')?.value && flightForm.get('description')?.touched"
+         class="ui info message">Please enter a description.</div>
+  </div>
+  <div class="field" [class.error]="flightForm.get('roomno')?.invalid && (flightForm.get('roomno')?.dirty || flightForm.get('roomno')?.touched)">
+    <label for="roomno">Flight number:</label>
+    <input formControlName="roomno" id="roomno">
+    <div *ngIf="flightForm.get('roomno')?.invalid && (flightForm.get('roomno')?.dirty || flightForm.get('roomno')?.touched)"
+         class="ui error message">Flight number must be 6 characters long.</div>
+    <div *ngIf="!flightForm.get('roomno')?.value && flightForm.get('roomno')?.touched"
+         class="ui info message">Please enter a flight number - at least 6 characters long.</div>
   </div>
   <div class="field">
-    <label for="roomno">Flight number:</label>
-    <input name="roomno" id="roomno"
-    minlength="6"
-    maxlength="6"
-    #newroomno>
+    <label>Additional services:</label>
+    
+    <div class="ui checkbox">
+      <input type="checkbox" formControlName="businessClass">
+      <label>Business Class</label>
+    </div>
+    <div class="ui checkbox">
+      <input type="checkbox" formControlName="freeFood">
+      <label>Gratis food</label>
+    </div>
+    <div class="ui checkbox">
+      <input type="checkbox" formControlName="directFlight">
+      <label>Direct Flight</label>
+    </div>
   </div>
-  <button (click)="addRoom(newdescription, newroomno)" class="ui pink right floated button">
+  <button type="submit" class="ui pink right floated button" [disabled]="flightForm.invalid">
     Submit
-    </button>
+  </button>
 </form>
 <div class="tbody">
   <app-room *ngFor="let room of rooms" [room]="room"></app-room>
+</div>
+
+<div *ngIf="additionalCost > 0">
+  <p>Your bill is increased by {{ additionalCost }} EUR due to the selected additional services.</p>
 </div>
