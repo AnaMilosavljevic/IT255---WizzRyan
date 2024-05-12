@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { PageService } from './PageService';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DIComponent } from './di/di.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RecommendationComponent,
     AboutComponent,
     HomeComponent,
+    DIComponent,
   ],
   imports: [
     BrowserModule,
