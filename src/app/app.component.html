@@ -1,5 +1,6 @@
 <app-home></app-home>
 <router-outlet></router-outlet>
+<app-flight-list></app-flight-list>
 <br>
 <form class="ui large form segment" *ngIf="pageService.getIsHomePage()" [formGroup]="flightForm" (ngSubmit)="onSubmit()">
   <h3 class="ui header">Add new flight</h3>
@@ -39,6 +40,7 @@
     Submit
   </button>
 </form>
+
 <div class="tbody">
   <app-room *ngFor="let room of rooms" [room]="room"></app-room>
 </div>

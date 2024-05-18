@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { PageService } from './PageService';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DIComponent } from './di/di.component';
+import { FlightListComponent } from './flight-list/flight-list.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { DIComponent } from './di/di.component';
     AboutComponent,
     HomeComponent,
     DIComponent,
+    FlightListComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [PageService],
   bootstrap: [AppComponent]

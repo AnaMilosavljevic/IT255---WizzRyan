@@ -76,4 +76,5 @@ export class AppComponent implements OnInit {
 
     console.log('Additional cost:', this.additionalCost);
   }
+  
 }
