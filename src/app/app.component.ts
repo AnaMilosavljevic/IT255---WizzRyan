@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, NavigationEnd } from '@angular/router';
 import { Room } from './room/room.model';
 import { PageService } from './PageService';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',

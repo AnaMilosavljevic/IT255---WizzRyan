@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DIComponent } from './di/di.component';
 import { FlightListComponent } from './flight-list/flight-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlightService } from './services/flight.service';
 
 
 @NgModule({
